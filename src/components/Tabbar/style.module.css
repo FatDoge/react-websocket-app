@@ -1,0 +1,14 @@
+.container {
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #5da6ff;
+  font-size: 20px;
+  box-shadow: 0px 3px 4px #5da6ff73;
+  color: white;
+  text-shadow: 0px 1px 1px #ffffff66;
+  z-index: 1;
+}

@@ -1,0 +1,39 @@
+.container {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  background: #F5F5F5;
+  height: 40px;
+  padding: 10px 0;
+}
+
+.container input {
+  flex: 1 1;
+  border: none;
+  font-size: 18px;
+  border-radius: 50px;
+  margin: 0 4px;
+  box-shadow: 0px 3px 4px #dcdcdc73;
+  padding: 0 14px;
+}
+
+.container button {
+  padding: 0 20px;
+  border: none;
+  color: white;
+  background: #5da6ff;
+  border-radius: 50px;
+  margin: 0 4px;
+  box-shadow: 0px 3px 4px #5da6ff73
+}
+
+.container button:disabled {
+  padding: 0 20px;
+  border: none;
+  color: white;
+  background: #d6d6d6;
+  border-radius: 50px;
+  margin: 0 4px;
+  box-shadow: 0px 3px 4px #d6d6d67d;
+}
