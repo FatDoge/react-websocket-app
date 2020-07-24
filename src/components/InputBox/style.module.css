@@ -8,7 +8,7 @@
   padding: 10px 0;
 }
 
-.container input {
+.container .input {
   flex: 1 1;
   border: none;
   font-size: 18px;
@@ -18,7 +18,7 @@
   padding: 0 14px;
 }
 
-.container button {
+.container .button {
   padding: 0 20px;
   border: none;
   color: white;

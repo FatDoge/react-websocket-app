@@ -21,11 +21,11 @@ const getUniqueID = () => {
 
 const sendMessage = (json, userId) => {
   // We are sending the current data to all connected clients
-  // Object.keys(clients).map((client) => {
-  //   clients[client].sendUTF(json);
-  // });
+  Object.keys(clients).map((client) => {
+    clients[client].sendUTF(json);
+  });
 
-  clients[userId].sendUTF(json)
+  // clients[userId].sendUTF(json)
 }
 
 const typesDef = {
@@ -55,7 +55,7 @@ wsServer.on('request', function(request) {
         userId = dataFromClient.userId
         json.data = { content, userId, }
       }
-      sendMessage(JSON.stringify(json), userID);
+      sendMessage(JSON.stringify(json));
     }
   });
   // user disconnected

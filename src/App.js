@@ -5,12 +5,13 @@ import Content from './components/Content'
 import InputBox from './components/InputBox'
 import { getLocationParams } from '../src/utils'
 
+
 const client = new W3CWebSocket('ws://127.0.0.1:8000');
 
 class App extends Component {
   state = {
     messages: [],
-    userId: getLocationParams().userId
+    userId: getLocationParams().userId||'anoymous'
   }
   componentWillMount() {
     client.onopen = () => {

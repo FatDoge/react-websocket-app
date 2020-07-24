@@ -3,12 +3,15 @@ import style from './style.module.css'
 import Loading from '../Loading'
 
 export default class Message extends Component {
+  constructor(props) {
+    super(props)
+    this.message = React.createRef()
+  }
   state = {
     loading: {}
   }
 
   componentDidMount() {
-    console.log(this.props)
     this.setState({
       loading: {
         ...this.state.loading,
@@ -22,7 +25,9 @@ export default class Message extends Component {
             ...this.state.loading,
             [this.props.id]: false
           }
-        })
+        }, () => this.message.current.scrollIntoView({
+          behavior: 'smooth'
+        }))
       }, 1620)
     }
     )
@@ -36,7 +41,7 @@ export default class Message extends Component {
       <div className={isSelf ? style.selfContainer : style.container}>
         <span>{userId}</span>
         {loading[id] ?
-          <Loading isSelf={isSelf}/> : <p>{content}</p>
+          <Loading isSelf={isSelf}/> : <p ref={ this.message }>{content}</p>
         }
 
       </div>

@@ -23,7 +23,7 @@
   align-self: flex-start;
   box-shadow: 0px 3px 4px #5da6ff73;
   border-radius: 0 10px 10px 10px;
-  animation: fade-in .65s ease-in forwards;
+  animation: fade-in .65s ease-in-out forwards;
 }
 
 .selfContainer p {
@@ -37,7 +37,7 @@
   padding: 12px;
   box-shadow: 0px 3px 4px #5da6ff73;
   border-radius: 10px 0px 10px 10px;
-  animation: fade-in .65s ease-in forwards;
+  animation: expand .65s ease-in-out forwards;
 
 }
 .container span {
@@ -74,7 +74,7 @@
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  positon: relative;
+  position: relative;
   width: 50px;
   height: 50px;
   background: #380848;
@@ -104,13 +104,18 @@
 }
 
 @keyframes expand {
-  50% {
-      width: auto;
-      border-radius: 6px;
+  0% {
+    opacity: 0;  
   }
+  50% {
+    opacity: .5;  
+  }
+  80% {
+    opacity: .8;
+  }
+
   100% {
-      width: auto;
-      border-radius: 4px;
+    opacity: 1;
   }
 }
 @-webkit-keyframes fade-in {
