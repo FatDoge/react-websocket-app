@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import { w3cwebsocket as W3CWebSocket } from "websocket";
 import Tabbar from './components/Tabbar'
 import Content from './components/Content'
 import InputBox from './components/InputBox'
 import { getLocationParams } from '../src/utils'
 
 
-const client = new W3CWebSocket('ws://127.0.0.1:8000');
+const client = new WebSocket('ws://127.0.0.1:8000');
 
 class App extends Component {
   state = {
